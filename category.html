@@ -38,12 +38,14 @@
           </div>
 
           <form class="search" action="">
-            <a href="search.html"> <input
-              class="search-place"
-              type="search"
-              placeholder="Найти товар"
-            />
-            <img class="search-icon" src="./image/search.png" alt="" /> </a>
+            <a href="search.html">
+              <input
+                class="search-place"
+                type="search"
+                placeholder="Найти товар"
+              />
+              <img class="search-icon" src="./image/search.png" alt="" />
+            </a>
           </form>
           <a class="action text-center d-none d-md-block" href="liked.html">
             <img src="./image/likedd.svg" alt="" />
@@ -56,8 +58,7 @@
           <a class="action text-center d-none d-md-block" href="cart.html">
             <img src="./image/shopping-cart.png" alt="shopping-cart" />
             <p class="main-p m-0">Корзина</p>
-          <span class="natification cart"></span>
-
+            <span class="natification cart"></span>
           </a>
           <button class="user align-items-center d-none d-md-flex open-modal">
             <img class="user-img" src="./image/avatar.png" alt="" />
@@ -166,17 +167,24 @@
               >
                 <input type="text" />-<input type="text" />
               </form>
+              <input type="range" class="w-100 mt-3 cost-limit">
               <div class="typeproducts mt-4">
                 <p class="main-p m-0 py-3 this-product"></p>
               </div>
-              <p class="main-p">В наличии</p>
+              <div class="cost-increase d-flex">
+                <label class="switch">
+                  <input type="checkbox" checked />
+                  <span class="slider round"></span>
+                </label>
+                <p class="main-p ms-2">В наличии</p>
+              </div>
               <button class="submit-btn w-100">Применить</button>
             </div>
             <div class="exact-all-products">
-              <div id="exact-products-row" class="d-grid">
-                
+              <div id="exact-products-row" class="d-grid"></div>
+              <div class="text-center">
+                <button class="text-btn mt-4">Показать ещё</button>
               </div>
-             <div class="text-center"> <button class="text-btn  mt-4">Показать ещё</button></div>
             </div>
           </div>
         </div>
