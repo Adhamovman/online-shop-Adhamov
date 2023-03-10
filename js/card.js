@@ -34,8 +34,9 @@ function getCard(
 ) {
   return `  <div class="card w-100">
     <div class="card-head">  <img src= ${image} class="card-img-top" alt="...">
-  
-     <img onclick="addProductToFavourite(${id})" class="like" src="./image/likedd.svg" alt="">
+     <img onclick="addProductToFavourite(${id})" class="like" src="./image/${
+    favourite.find((el) => el.id == id) ? "like.png" : "likedd.svg"
+  }" alt="">
       <p class="product-discount m-0">
      -${discount}% 
       </p>
@@ -83,7 +84,6 @@ function addProductToFavourite(id) {
   } else {
     favourite.push(product);
   }
-
   setFavouriteCart();
+  window.location.reload();
 }
-
