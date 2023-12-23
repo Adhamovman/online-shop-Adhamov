@@ -10,8 +10,8 @@ let favourite = favourite_parse || [];
 function getCartLength() {
   let cart_local = localStorage.getItem("cart");
   let cart_parse = JSON.parse(cart_local);
-  cartLength.innerHTML = cart_parse.length;
-  cart_length.innerHTML = cart_parse.length;
+  cartLength.innerHTML = cart_parse.length || 0;
+  cart_length.innerHTML = cart_parse.length || 0;
 }
 
 getCartLength();
